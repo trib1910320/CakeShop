@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_SESSION['user'])) {
         $AddContact = Contact::create([
             'customer' => $_POST['customer'],
-            'mail' => $_POST['mail'],
+            'email' => $_POST['email'],
             'phone' => $_POST['phone'],
             'detail' => $_POST['detail'],
             'id_user' => $_SESSION['iduser']
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $AddContact = Contact::create([
             'customer' => $_POST['customer'],
-            'mail' => $_POST['mail'],
+            'email' => $_POST['email'],
             'phone' => $_POST['phone'],
             'detail' => $_POST['detail'],
             'id_user' => 0

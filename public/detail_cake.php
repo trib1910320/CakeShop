@@ -21,7 +21,7 @@ $detailCake = Cake::find($_REQUEST['id']);
         <a class="text-decoration-none text-warning  fw-bold" href="#"><?= $detailCake->cake ?></a>
     </div>
     <hr>
-    <form action="add_detailcart.php" method="post" class="row">
+    <form action="addCake_cart.php" method="post" class="row">
         <div class="col-lg-6">
             <img src="img/cakes/<?= $detailCake->img ?>" height="400px" class="card-img-top mt-2 rounded-1" alt="...">
         </div>

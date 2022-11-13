@@ -29,9 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
 }
 //$numbercart ở phần narbar.php
 $sumprice = 0;
-
 ?>
-
 <main>
     <?php require '../partials/notification.php' ?>
     <div class="d-flex fs-5">

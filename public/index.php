@@ -10,6 +10,7 @@ $hotcakes = Cake::orderBy('quantity_sold', 'DESC')->get();
 $newcakes = Cake::orderBy('date_entered', 'DESC')->get();
 ?>
 <main>
+<?php require '../partials/notification.php' ?>
     <!-- Băng chuyền Begin -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">

@@ -22,7 +22,6 @@ $contacts = Contact::orderBy('status', 'ASC')->orderBy('date_entered', 'ASC')->g
                 </div>
             </div>
         </div>
-        <br>
         <div class="card-body">
             <h5 class="card-header bg-primary rounded-2 p-2 fs-5 fw-bold">Hộp thư liên hệ</h5>
             <div class="card-body">

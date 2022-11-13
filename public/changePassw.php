@@ -13,6 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }else{
         echo "Mật khẩu cũ không chính xác";
     }
+    $_SESSION['notificSuccess']="Bạn đã đổi mật khẩu thành công.";
     header('Location: '. BASE_URL_PATH);
     exit();
 }

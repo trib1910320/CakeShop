@@ -16,7 +16,7 @@ if (isset($_REQUEST['page'])) {
 }
 ?>
 <main class="row">
-<?php require '../partials/notification.php' ?>
+<?php require '../../partials/notification.php' ?>
     <div class="col-lg-3 h-auto">
         <?php include "../../partials/narbarAdmin.php" ?>
     </div>

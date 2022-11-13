@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 13, 2022 lúc 01:18 PM
+-- Thời gian đã tạo: Th10 13, 2022 lúc 04:31 PM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 8.1.6
 
@@ -112,8 +112,8 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `customer`, `email`, `phone`, `detail`, `status`, `date_entered`, `id_user`) VALUES
-(1, 'Nguyễn Văn A', 'nguyena@gmail.com', '0987654321', 'Xin chào', 1, '2022-10-23 07:54:20', 0),
-(2, 'sdad', 'áda', 'ád', 'ád', 0, '2022-10-23 08:15:16', 4);
+(1, 'Nguyễn Văn A', 'nguyena@gmail.com', '0987654321', 'Xin chào', 0, '2022-10-23 07:54:20', 0),
+(3, 'Nguyễn Văn B', '', '0832291233', 'Xin chào', 0, '2022-11-13 15:27:24', 4);
 
 -- --------------------------------------------------------
 
@@ -133,13 +133,13 @@ CREATE TABLE `detail_cart` (
 --
 
 INSERT INTO `detail_cart` (`id`, `cart_id`, `cake_id`, `number`) VALUES
-(207, 140, 5, 3),
-(208, 140, 22, 1),
+(208, 140, 22, 3),
 (209, 150, 5, 1),
 (210, 150, 18, 1),
 (211, 151, 20, 1),
 (212, 151, 1, 1),
-(213, 152, 28, 1);
+(213, 152, 28, 1),
+(215, 140, 20, 2);
 
 -- --------------------------------------------------------
 
@@ -255,13 +255,13 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT cho bảng `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `detail_cart`
 --
 ALTER TABLE `detail_cart`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=217;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
