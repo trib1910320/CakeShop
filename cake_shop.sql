@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 13, 2022 lúc 05:58 AM
+-- Thời gian đã tạo: Th10 13, 2022 lúc 01:18 PM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 8.1.6
 
@@ -43,12 +43,12 @@ CREATE TABLE `cake` (
 --
 
 INSERT INTO `cake` (`id`, `img`, `cake`, `detail`, `price`, `quantity_sold`, `date_entered`, `id_type`) VALUES
-(1, 'banh-dui-ga.jpg', 'Bánh Đùi Gà', 'Đang cập nhật', 50000, 52, '2022-10-26 09:23:13', 20000),
+(1, 'banh-dui-ga.jpg', 'Bánh Đùi Gà', 'Đang cập nhật', 50000, 53, '2022-10-26 09:23:13', 20000),
 (2, 'banh-kem-chien-si.jpg', 'Bánh Kem Chiến Sĩ', 'Đang cập nhật', 50000, 32, '2022-10-24 11:57:00', 30000),
-(5, 'banh-kem-socola-2-tang-la-mat.jpg', 'Bánh Kem Socola', 'Đang cập nhật', 150000, 11, '2022-10-24 11:53:09', 30000),
-(18, 'banh-da-lon.jpg', 'Bánh Da Lợn', 'Đang cập nhật', 15000, 6, '2022-10-26 09:30:19', 10000),
+(5, 'banh-kem-socola-2-tang-la-mat.jpg', 'Bánh Kem Socola', 'Đang cập nhật', 150000, 12, '2022-10-24 11:53:09', 30000),
+(18, 'banh-da-lon.jpg', 'Bánh Da Lợn', 'Đang cập nhật', 15000, 7, '2022-10-26 09:30:19', 10000),
 (19, 'banh-beo.jpg', 'Bánh Bèo', 'Đang cập nhật', 25000, 30, '2022-11-12 03:56:08', 20000),
-(20, 'banh-Black-Forest-duc.jpg', 'Bánh Black-Forest', 'Đang cập nhật', 150000, 4, '2022-11-12 04:52:12', 30000),
+(20, 'banh-Black-Forest-duc.jpg', 'Bánh Black-Forest', 'Đang cập nhật', 150000, 5, '2022-11-12 04:52:12', 30000),
 (21, 'banh-bong-lan-trung-muoi.jpg', 'Bánh Bông Lan Trứng Muối', 'Đang cập nhật', 50000, 25, '2022-11-12 03:58:19', 20000),
 (22, 'banh-dau-valentine.jpg', 'Bánh Dâu Valentine', 'Đang cập nhật', 120000, 10, '2022-11-12 12:45:36', 10000),
 (23, 'banh-do.jpg', 'Bánh Đỏ', 'Đang cập nhật', 55000, 20, '2022-11-12 04:42:57', 10000),
@@ -85,7 +85,10 @@ CREATE TABLE `cart` (
 
 INSERT INTO `cart` (`id`, `id_user`, `status`, `hide`, `date_entered`) VALUES
 (140, 4, 0, 0, '2022-11-05 09:27:01'),
-(141, 13, 0, 0, '2022-11-05 15:12:56');
+(141, 13, 0, 0, '2022-11-05 15:12:56'),
+(150, 15, 2, 0, '2022-11-13 05:55:51'),
+(151, 15, 1, 0, '2022-11-13 05:56:05'),
+(152, 15, 0, 0, '2022-11-13 11:56:05');
 
 -- --------------------------------------------------------
 
@@ -130,8 +133,13 @@ CREATE TABLE `detail_cart` (
 --
 
 INSERT INTO `detail_cart` (`id`, `cart_id`, `cake_id`, `number`) VALUES
-(207, 140, 5, 1),
-(208, 140, 22, 1);
+(207, 140, 5, 3),
+(208, 140, 22, 1),
+(209, 150, 5, 1),
+(210, 150, 18, 1),
+(211, 151, 20, 1),
+(212, 151, 1, 1),
+(213, 152, 28, 1);
 
 -- --------------------------------------------------------
 
@@ -241,7 +249,7 @@ ALTER TABLE `cake`
 -- AUTO_INCREMENT cho bảng `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
 
 --
 -- AUTO_INCREMENT cho bảng `contact`
@@ -253,7 +261,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT cho bảng `detail_cart`
 --
 ALTER TABLE `detail_cart`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
