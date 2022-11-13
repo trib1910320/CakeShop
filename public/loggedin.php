@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$_SESSION['admin'] = $user->id_admin;
 			$loggedin = true;
 		} else {
-			$_SESSION['notificError'] = 'Địa chỉ tên đăng nhập và mật khẩu không khớp!';
+			$_SESSION['notificError'] = 'Tên đăng nhập hoặc mật khẩu của bạn không chính xác!';
 		}
 	} else {
 		$_SESSION['notificError'] = 'Hãy đảm bảo rằng bạn cung cấp đầy đủ tên đăng nhập và mật khẩu!';

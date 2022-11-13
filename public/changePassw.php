@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $user->password = password_hash($_POST['newpassword'],PASSWORD_DEFAULT);
         $user->save();
     }else{
-        echo "Mật khẩu cũ không chính xác";
+        $_SESSION['notificError']="Mật khẩu cũ không chính xác!";
     }
     $_SESSION['notificSuccess']="Bạn đã đổi mật khẩu thành công.";
     header('Location: '. BASE_URL_PATH);
@@ -23,6 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         color: #b31717;
     }
 </style>
+<?php require '../partials/notification.php' ?>
 <div class="container mt-4 mb-4">
     <div class="card border-info w-50 mx-auto">
         <div class="card-header bg-info fw-bold text-black text-center fs-4">Đổi mật khẩu</div>
