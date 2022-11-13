@@ -1,0 +1,35 @@
+body{
+	font-family: 'Roboto';
+}
+header, footer{
+    background: rgb(255, 168, 38);
+}
+header .nav-pills .nav-link.active{
+    background-color: white;
+    color: black;
+}
+header .nav-link{
+    color:  rgb(90, 33, 0);
+}
+header .nav{
+    --bs-nav-link-hover-color: rgb(255, 255, 255);
+}
+header .nav-link:hover{
+    border-bottom: 3px solid black;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.shop .nav-link:hover{
+    border-bottom: 3px solid rgb(241, 183, 36);   
+}
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+.badge {
+    --bs-badge-padding-x: 0.15em;
+    --bs-badge-font-size: 0.85em;
+}
